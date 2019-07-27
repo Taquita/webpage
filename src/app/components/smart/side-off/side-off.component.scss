@@ -1,0 +1,27 @@
+@import "~src/styles/mixins";
+@import "~src/styles/variables";
+
+.side__section {
+  @include size(100%);
+  background-color: #000226;
+  .side__mirror {
+    @include size(100%);
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+
+    .side__image--profile {
+      @include size(100%);
+      display: block;
+      background-image: url("../../../../assets/photos/profile.jpg");
+      transform: scale(1.5);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: -40px -10px;
+    }
+  }
+}
+
+@media #{$medium} {
+  .side__section .side__mirror .side__image--profile {
+    background-position: 0 -10px;
+  }
+}

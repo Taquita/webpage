@@ -1,0 +1,45 @@
+@import "~src/styles/variables";
+@import "~src/styles/mixins";
+@import url('https://fonts.googleapis.com/css?family=Barriecito|Source+Code+Pro&display=swap');
+
+.home__sector {
+  @include size(100%);
+  background-color: #000226;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .home__main {
+    font-family: 'Barriecito', cursive;
+    font-size: 1rem;
+    color: #fff;
+
+    .main__route {
+      font-family: 'Source Code Pro', monospace;
+    }
+
+    .main__content {
+      font-family: 'Source Code Pro', monospace;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media #{$small} {
+  .home__sector .home__main {
+    font-size: .8rem;
+  }
+}
+
+@media #{$medium} {
+  .home__sector .home__main {
+    font-size: 1rem;
+  }
+}
+
+@media #{$large} {
+  .home__sector .home__main {
+    font-size: 1.1rem;
+  }
+}

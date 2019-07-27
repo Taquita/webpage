@@ -1,0 +1,20 @@
+@import "../styles/variables";
+
+main {
+  display: grid;
+  grid-template-columns: 100%;
+  overflow: hidden;
+
+  .side__block {
+    display: none;
+  }
+}
+
+@media #{$small} {
+  main {
+    grid-template-columns: 40% 60%;
+    .side__block {
+      display: block;
+    }
+  }
+}
